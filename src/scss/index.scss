@@ -1,7 +1,13 @@
-@import 'variables';
+@import "normalize";
+@include normalize();
+@import "var";
 @import 'mixin';
+@import "font";
+@import "default";
 
+@import 'block/header';
+@import 'block/library';
+@import 'block/cart';
+@import 'block/book';
 
-body {
-   font-family: Roboto, sans-serif;
-}
+@import 'block/footer';

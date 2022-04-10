@@ -2,23 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Big Brother - Своя онлайн-библиотека 1984</title>
     <link rel="stylesheet" href="css/index.min.css" />
-    <script src="js/index.min.js"></script>
+    <script src="js/index.min.js" defer></script>
   </head>
 
   <body>
     <section class="library">
       <header class="header library__header">
-        <div class="container">
+        <div class="container header__container">
           <img
+            class="header__logo"
             src="./img/logo.svg"
             alt="Логотип проекта библиотеки big brother"
+            width="61"
+            height="41"
           />
 
           <button class="header__btn-add">Добавить книгу</button>
@@ -102,7 +102,7 @@
         <h2 class="visually-hidden">Список книг</h2>
         <ul class="library__list">
           <li class="library__item">
-            <a href="/book">
+            <a href="/book" data-navigo>
               <article class="cart">
                 <div class="cart__wrapper">
                   <img
@@ -157,7 +157,7 @@
           </li>
 
           <li class="library__item">
-            <a href="/book">
+            <a href="/book" data-navigo>
               <article class="cart">
                 <div class="cart__wrapper">
                   <img
@@ -218,15 +218,25 @@
         <button
           class="footer__btn library__add-btn"
           aria-label="добавить книгу"
-        ></button>
+        >
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="22" fill="currentColor"/>
+            <rect x="21.7767" y="9.21667" width="0.433333" height="25.5667" fill="#242424" stroke="white" stroke-width="0.433333"/>
+            <rect x="9.21667" y="22.2233" width="0.433333" height="25.5667" transform="rotate(-90 9.21667 22.2233)" fill="#242424" stroke="white" stroke-width="0.433333"/>
+          </svg>
+        </button>
       </footer>
     </section>
     <!-- /library -->
 
-    <section class="book">
-      <header class="header library__header">
-        <div class="container">
-          <button class="header__btn_back">назад</button>
+    <section class="book hidden">
+      <header class="header book__header">
+        <div class="container header__container">
+          <button class="header__btn_back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
+            </svg>
+          </button>
 
           <button class="header__btn header__btn-delete">удалить</button>
         </div>
@@ -287,10 +297,15 @@
     </section>
     <!-- /book -->
 
-    <section class="add">
+    <section class="add hidden">
+      <h2 class="visually-hidden">Форма для добавления книги в базу данных</h2>
       <header class="header add__header">
-        <div class="container">
-          <button class="header__btn_back">назад</button>
+        <div class="container header__container">
+          <button class="header__btn_back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
+            </svg>
+          </button>
 
           <button class="header__btn header__btn-search">поиск</button>
         </div>
